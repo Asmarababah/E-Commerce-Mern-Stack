@@ -18,7 +18,7 @@ const EditProduct = () => {
     useEffect(() => {
         const fetchProductDetails = async () => {
             try {
-                const response = await fetch(`http://localhost:4000/allproducts/${id}`);
+                const response = await fetch(`https://e-commerce-mern-stack-6dgz.onrender.com/allproducts/${id}`);
                 const data = await response.json();
                 setProductDetails(data);
             } catch (error) {
@@ -46,7 +46,7 @@ const EditProduct = () => {
                 const formData = new FormData();
                 formData.append('product', image);
 
-                const imageResponse = await fetch("http://localhost:4000/upload", {
+                const imageResponse = await fetch("https://e-commerce-mern-stack-6dgz.onrender.com/upload", {
                     method: 'POST',
                     headers: {
                         Accept: "application/json",
@@ -63,7 +63,7 @@ const EditProduct = () => {
                 }
             }
 
-            const productResponse = await fetch(`http://localhost:4000/allproducts/${id}`, {
+            const productResponse = await fetch(`https://e-commerce-mern-stack-6dgz.onrender.com/allproducts/${id}`, {
                 method: 'PUT',
                 headers: {
                     Accept: "application/json",
