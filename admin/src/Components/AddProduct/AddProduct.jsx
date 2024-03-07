@@ -33,7 +33,7 @@ const AddProduct = () => {
         formData.append('product', image);
 
         try {
-            const response = await fetch("http://localhost:4000/upload", {
+            const response = await fetch("https://e-commerce-mern-stack-6dgz.onrender.com/upload", {
                 method: 'POST',
                 headers: {
                     Accept: "application/json",
@@ -46,7 +46,7 @@ const AddProduct = () => {
                 product.image = responseData.image_url;   //to save image on multer
                 console.log(product);
 
-                const addProductResponse = await fetch("http://localhost:4000/addproduct", {  //save all data on mongodb
+                const addProductResponse = await fetch("https://e-commerce-mern-stack-6dgz.onrender.com/addproduct", {  //save all data on mongodb
                     method: 'POST',
                     headers: {
                         Accept: "application/json",
