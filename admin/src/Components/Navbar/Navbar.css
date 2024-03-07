@@ -1,0 +1,15 @@
+.nav-admin {
+    height: 70px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    
+}
+
+.nav-admin ol {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    list-style: none;
+}
