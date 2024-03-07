@@ -12,7 +12,12 @@ const { log } = require("console");
 // any req automatically passed through json
 app.use(express.json());
 // react connect with express app at port 4000
-app.use(cors());
+app.use(cors({
+    origin: [
+        "http://localhost:4000",
+        "https://e-commerce-mern-stack-6dgz.onrender.com/"
+    ]
+}));
 
 // connect with database using mongodb
 mongoose.connect("mongodb+srv://asmarababah86:Passpasspass1993@cluster0.b2isyhe.mongodb.net/e-commerce");
