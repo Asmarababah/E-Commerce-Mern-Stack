@@ -17,9 +17,9 @@ const ShopContextProvider = (props) => {
 
 
     useEffect(() => {
-        fetch("http://localhost:4000/allproducts").then((response) => response.json()).then((data) => setAll_Product(data))
+        fetch("https://e-commerce-mern-stack-6dgz.onrender.com/allproducts").then((response) => response.json()).then((data) => setAll_Product(data))
         if (localStorage.getItem("auth-token")) {
-            fetch('http://localhost:4000/getcart', {
+            fetch('https://e-commerce-mern-stack-6dgz.onrender.com/getcart', {
                 method: "POST",
                 headers: {
                     Accept: 'application/form-data',
@@ -88,7 +88,7 @@ const ShopContextProvider = (props) => {
         return totalItem;
     }
 
-    const contextValue = { getTotalCartItems, getTotalCartAmount, all_product, cartItems, addToCart, removeFromCart};
+    const contextValue = { getTotalCartItems, getTotalCartAmount, all_product, cartItems, addToCart, removeFromCart };
 
 
 
