@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import './Popular.css'
 import Item from '../Items/Item'
 
-const Popular = (props) => {
+const Popular = () => {
     const [data_product, setData_Product] = useState([]);
 
     useEffect(() => {
