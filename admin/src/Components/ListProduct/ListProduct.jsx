@@ -34,7 +34,7 @@ const ListProduct = () => {
         <div className='list-product'>
             <h1>All Products List</h1>
 
-            <div className="listproduct-format-main">
+            <div id='hide' className="listproduct-format-main">
                 <p>Count</p>
                 <p>Product</p>
                 <p>Title</p>
@@ -60,7 +60,7 @@ const ListProduct = () => {
                             border: "1px solid black"
                         }}>
                         </div>
-                        <p>{product.name}</p>
+                        <p id='name'>{product.name}</p>
                         <p>{product.old_price}</p>
                         <p>{product.new_price} jd</p>
                         <p>{product.category}</p>
